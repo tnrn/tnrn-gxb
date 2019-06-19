@@ -19,6 +19,7 @@ import javax.annotation.Nonnull;
  */
 public class RCTGxbModule extends ReactContextBaseJavaModule {
     private static final String KEY_TOKEN = "token";
+    private static final String KEY_TITLE = "title";
 
     public RCTGxbModule(@Nonnull ReactApplicationContext reactContext) {
         super(reactContext);
@@ -40,12 +41,14 @@ public class RCTGxbModule extends ReactContextBaseJavaModule {
         try {
             GxbParams.Builder builder = new GxbParams.Builder()
                     .setApp(getCurrentActivity().getApplication())
-                    .setThemeColor("#0e000000");
+                    .setThemeColor("#FFFFFF");
 
             GxbCrawlerSdk.INSTANCE.init(builder.build());
 
             HashMap<String, String> map = new HashMap<>();
-            map.put("isSDK", "true");
+            if (options.hasKey(KEY_TITLE)) {
+                map.put("title", options.getString(KEY_TITLE));
+            }
             GxbCrawlerSdk.INSTANCE.auth(
                     getCurrentActivity(),
                     options.getString(KEY_TOKEN),

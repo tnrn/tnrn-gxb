@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.treefinance.gfd" version="0.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <!-- 不要改，会影响网页加载速度 -->
+    <preference name="BackupWebStorage" value="local" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <!-- 不要改，必须使用false -->
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    
+    <feature name="LocalStorage">
+        <param name="ios-package" value="GXBCDVLocalStorage" />
+    </feature>
+    
+    <!-- 通知列表-->
+    <feature name="Notification">
+        <param name="ios-package" value="GXBCDVNotification" />
+    </feature>
+    
+    <!-- 获取位置-->
+    <feature name="Geolocation">
+        <param name="ios-package" value="GXBCDVLocation" />
+    </feature>
+
+    <!-- 获取配置-->
+    <feature name="AppConfig">
+        <param name="ios-package" value="GXBCordovaAppConfigPlugin" />
+    </feature>
+   <!-- 页面跳转-->
+    <feature name="Controller">
+        <param name="ios-package" value="GXBCordovaPageControllerPlugin" />
+    </feature>
+    
+   <!-- navBar-->
+    <feature name="NavBar">
+        <param name="ios-package" value="GXBNavBarPlugin" />
+    </feature>
+    
+    <!-- 爬取插件-->
+    <feature name="OpenWebView">
+        <param name="ios-package" value="GXBCordovaOpenWebView" />
+    </feature>
+    
+    <!-- 弹出提示-->
+    <feature name="Progress">
+        <param name="ios-package" value="GXBCordovaProgressPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    
+    <!-- webview-->
+    <feature name="WebView">
+        <param name="ios-package" value="GXBWebViewPlugin" />
+    </feature>
+   <!--  openUrl-->
+   <feature name = "App">
+       <param name = "ios-package" value = "GXBCordovaUrlPlugin" />
+   </feature>
+    
+    <name>公信宝</name>
+    <description>
+        公信宝数据爬取SDK
+    </description>
+    <author email="hmq@gxb.io" href="http://gxb.io">
+        杭州存信数据科技公司
+    </author>
+    <content src="index.html" />
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="gxb:*" />
+    <allow-intent href="itms-apps:*" />
+</widget>

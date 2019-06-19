@@ -1,0 +1,30 @@
+{
+  "name": "tnrn-gxb",
+  "description": "公信宝 sdk",
+  "main": "index.js",
+  "author": "xxx",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "homepage": "https://github.com/tnrn/tnrn-gxb",
+  "bugs": "https://github.com/tnrn/tnrn-gxb/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnrn/tnrn-gxb"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "gxb",
+    "tnrn",
+    "tnrn-gxb",
+    "react-native-gxb"
+  ],
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": ">=0.55"
+  },
+  "license": "MIT"
+}
