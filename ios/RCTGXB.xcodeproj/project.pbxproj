@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C8BE564322BA366000CF1F54 /* gxb_data_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE564222BA366000CF1F54 /* gxb_data_sdk.framework */; };
 		C8BE564522BA371900CF1F54 /* RCTGXB.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BE564422BA371900CF1F54 /* RCTGXB.m */; };
+		C8BE566D22BA44A500CF1F54 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE566C22BA44A500CF1F54 /* libicucore.tbd */; };
+		C8BE566F22BA44BC00CF1F54 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE566E22BA44BC00CF1F54 /* libc++abi.tbd */; };
+		C8BE567322BA44DD00CF1F54 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BE567222BA44DD00CF1F54 /* libresolv.9.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +32,9 @@
 		C8BE564122BA366000CF1F54 /* gxb_data_sdk_bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = gxb_data_sdk_bundle.bundle; sourceTree = "<group>"; };
 		C8BE564222BA366000CF1F54 /* gxb_data_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gxb_data_sdk.framework; sourceTree = "<group>"; };
 		C8BE564422BA371900CF1F54 /* RCTGXB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTGXB.m; sourceTree = "<group>"; };
+		C8BE566C22BA44A500CF1F54 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C8BE566E22BA44BC00CF1F54 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		C8BE567222BA44DD00CF1F54 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BE567322BA44DD00CF1F54 /* libresolv.9.tbd in Frameworks */,
+				C8BE566F22BA44BC00CF1F54 /* libc++abi.tbd in Frameworks */,
+				C8BE566D22BA44A500CF1F54 /* libicucore.tbd in Frameworks */,
 				C8BE564322BA366000CF1F54 /* gxb_data_sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +66,7 @@
 				C8BE563F22BA364B00CF1F54 /* Framework */,
 				C8BE564022BA364B00CF1F54 /* RCTGXB */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				C8BE566B22BA44A500CF1F54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +85,16 @@
 				C8BE564422BA371900CF1F54 /* RCTGXB.m */,
 			);
 			path = RCTGXB;
+			sourceTree = "<group>";
+		};
+		C8BE566B22BA44A500CF1F54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8BE567222BA44DD00CF1F54 /* libresolv.9.tbd */,
+				C8BE566E22BA44BC00CF1F54 /* libc++abi.tbd */,
+				C8BE566C22BA44A500CF1F54 /* libicucore.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +269,10 @@
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = RCTGXB.temp_caseinsensitive_rename;
 				SKIP_INSTALL = YES;
 			};
@@ -266,7 +289,10 @@
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = RCTGXB.temp_caseinsensitive_rename;
 				SKIP_INSTALL = YES;
 			};
