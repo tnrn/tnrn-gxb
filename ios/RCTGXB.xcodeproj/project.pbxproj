@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRCTGXB.temp_caseinsensitive_rename.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTGXB.temp_caseinsensitive_rename.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		134814201AA4EA6300B7C361 /* libRCTGXB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTGXB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BE564122BA366000CF1F54 /* gxb_data_sdk_bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = gxb_data_sdk_bundle.bundle; sourceTree = "<group>"; };
 		C8BE564222BA366000CF1F54 /* gxb_data_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gxb_data_sdk.framework; sourceTree = "<group>"; };
 		C8BE564422BA371900CF1F54 /* RCTGXB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTGXB.m; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libRCTGXB.temp_caseinsensitive_rename.a */,
+				134814201AA4EA6300B7C361 /* libRCTGXB.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			);
 			name = RCTGXB;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRCTGXB.temp_caseinsensitive_rename.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libRCTGXB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,10 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Framework";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -273,7 +276,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = RCTGXB.temp_caseinsensitive_rename;
+				PRODUCT_NAME = RCTGXB;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -281,7 +284,10 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Framework";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -293,7 +299,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = RCTGXB.temp_caseinsensitive_rename;
+				PRODUCT_NAME = RCTGXB;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
