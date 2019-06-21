@@ -46,6 +46,7 @@ RCT_EXPORT_METHOD(auth:(NSDictionary *)options
     
     GXBSDK *gxb = [GXBSDK sharedInstance];
     gxb.themeColor = [UIColor whiteColor];
+    
     [gxb startWithToken:token Config:config Callback:^(SDKResult result) {
         // result为SDK返回参数，成功为1；失败为0;用户点击返回为-1；
         resolve([NSNumber numberWithInteger:result]);
