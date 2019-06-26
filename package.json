@@ -3,7 +3,7 @@
   "description": "公信宝 sdk",
   "main": "index.js",
   "author": "xxx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "test": "npm run test"
   },
